@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Rokkitt:wght@100;300;400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    margin: 5px 15px;
+}
+
+.layout {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer p {
+    float: right;
+}
+
+.box {
+    width: 25% ;
+    height: 48vh ;
+}
+
+.wait {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.desc {
+    background: #757575 ;
+    height: 100% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.desc div p {
+    text-align: center;
+    font-size: 50px ;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+.desc div p span {
+    color: black;
+}
+
+.desc div p:nth-child(3) {
+    margin-top: 30px;
+}
+
+/* ====================================================== */
+/* ====================================================== */
+/* ====================================================== */
+/* ====================================================== */
+/* ====================================================== */
+
+.name {
+    height: 100% ;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name h1 {
+    color: white
+}
+
+.social-links {
+    background: black;
+    height: 100% ;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links i {
+    font-size: 25px;
+    font-weight: lighter;
+    color: black;
+    margin: 0 10px ;
+    padding: 10px 12px ;
+    background: white;
+    border-radius: 50%;
+    transition: .3s ease-in-out;
+}
+
+.social-links i.fa:hover {
+    transform: rotate(360deg);
+}
+
+.about {
+    background: white;
+    height: 100% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services {
+    background: white;
+    height: 100% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial {
+    background: white;
+    height: 100% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact {
+    background: white;
+    height: 100% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ====================================================== */
+/* ====================================================== */
+/* ====================================================== */
+/* ====================================================== */
+/* ====================================================== */
+
+.box a {
+    position: relative;
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+    font-family: 'Rokkitt', serif;
+    font-size: 30px;
+    color: black;
+}
+
+.box a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 100% ;
+    width: 0%;
+    background: black;
+    height: 3px;
+    transition: all 0.5s linear;
+}
+
+.box a::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 100% ;
+    width: 0%;
+    background: black;
+    height: 3px;
+    transition: all 0.5s linear;
+}
+
+.box a:hover::before {
+    width: 100% ;
+    background: black;
+}
+
+.box a:hover::after {
+    width: 100% ;
+    background: black;
+}
+
+.just-nje {
+    background: #757575 ;
+    height: 100% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,186 +1,267 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&family=Rokkitt:wght@100;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --dark-blue-text: #00112C;
+    --light-blue-text: #0051d4 ;
+    --stone-text: #8d8d8d;
+    --dark-grey: #474747 ;
 }
 
 .container {
-    margin: 5px 15px;
+    max-width: 1500px;
+    margin: auto;
 }
 
 .layout {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
-footer p {
-    float: right;
-}
+/* ================================ */
+/* ====|                      |==== */
+/* ====|                      |==== */
+/* ====|        NAVBAR        |==== */
+/* ====|                      |==== */
+/* ====|                      |==== */
+/* ================================ */
 
-.box {
-    width: 25% ;
-    height: 48vh ;
-}
-
-.wait {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.desc {
-    background: #757575 ;
-    height: 100% ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.desc div p {
-    text-align: center;
-    font-size: 50px ;
-    font-weight: bold;
-    color: white;
-    text-transform: uppercase;
-}
-
-.desc div p span {
-    color: black;
-}
-
-.desc div p:nth-child(3) {
-    margin-top: 30px;
-}
-
-/* ====================================================== */
-/* ====================================================== */
-/* ====================================================== */
-/* ====================================================== */
-/* ====================================================== */
-
-.name {
-    height: 100% ;
-    background: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.name h1 {
-    color: white
-}
-
-.social-links {
-    background: black;
-    height: 100% ;
-    background: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.social-links i {
-    font-size: 25px;
-    font-weight: lighter;
-    color: black;
-    margin: 0 10px ;
-    padding: 10px 12px ;
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 16vh;
     background: white;
-    border-radius: 50%;
-    transition: .3s ease-in-out;
 }
 
-.social-links i.fa:hover {
-    transform: rotate(360deg);
-}
-
-.about {
-    background: white;
-    height: 100% ;
-    display: flex;
-    justify-content: center;
+header .layout {
+    justify-content: space-between;
     align-items: center;
+    padding: 3rem 1rem;
 }
 
-.services {
-    background: white;
-    height: 100% ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.logo h1 {
+    font-size: 2rem;
+    color: var(--dark-blue-text);
 }
 
-.testimonial {
-    background: white;
-    height: 100% ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.contact {
-    background: white;
-    height: 100% ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.nav-links ul li {
+    display: inline-flex;
+    margin-left: 1rem;
 }
 
-/* ====================================================== */
-/* ====================================================== */
-/* ====================================================== */
-/* ====================================================== */
-/* ====================================================== */
-
-.box a {
-    position: relative;
+.nav-links ul li a {
     text-decoration: none;
-    font-family: 'Roboto Mono', monospace;
-    font-family: 'Rokkitt', serif;
-    font-size: 30px;
-    color: black;
+    color: var(--dark-blue-text);
+    padding: 1rem 1.3rem;
+    font-size: 1rem;
 }
 
-.box a::before {
+.nav-links ul li a:hover {
+    color: var(--light-blue-text);
+}
+
+.checkbtn {
+    position: absolute;
+    font-size: 1.5rem;
+    top: 7rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+    cursor: pointer;
+    color: #fff;
+}
+
+label #btn, label #cancel {
+    display: none;
+}
+
+#check {
+    display: none;
+}
+  
+@media(max-width: 994px) {
+    .nav-links ul li a{
+        font-size: .9rem;
+    }
+}
+
+@media(max-width: 954px) {
+
+    .logo h1 {
+        font-size: 2rem;
+    }
+
+    header .layout {
+        align-items: center;
+        justify-content: center;
+    }
+
+    label #btn {
+        display: block;
+    }
+    
+    header .nav-links ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 100%;
+        background: #fff;
+        left: 0;
+        text-align: center;
+        z-index: 5;
+        transition: all .4s;
+    }
+
+    .nav-links ul li {
+        display: block;
+        margin: 2rem 0;
+    }
+
+    .nav-links ul li a {
+        font-size: 2.1rem;
+    }
+
+    #check {
+        display: none;
+    }
+
+    #check:checked ~ .nav-links ul {
+        top: 9rem;
+    }
+
+    #check:checked ~ label #btn {
+        display: none;
+    }
+
+    #check:checked ~ label #cancel {
+        display: block;
+    }
+}
+
+/* ================================ */
+/* ====|                      |==== */
+/* ====|                      |==== */
+/* ====|        HOME          |==== */
+/* ====|                      |==== */
+/* ====|                      |==== */
+/* ================================ */
+
+.home {
+    min-height: 100vh;
+    background: var(--dark-blue-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#wrapper {
+    display: inline-flex;
+}
+
+#wrapper .static-text {
+    color: #fff ;
+    font-size: 60px;
+    font: bold;
+}
+
+#wrapper .dynamic-texts {
+    margin-left: 15px ;
+    margin-top: 30px;
+    line-height: 90px;
+    height: 90px;
+    overflow: hidden;
+}
+
+.dynamic-texts li {
+    color: #fff;
+    list-style: none;
+    font-size: 60px;
+    font-weight: bold;
+    top: 0;
+    position: relative;
+    animation: slide 4.5s steps(3) infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -270px;
+    }
+}
+
+.dynamic-texts li span {
+    position: relative;
+}
+
+.dynamic-texts li span::after {
     content: '';
     position: absolute;
     left: 0;
-    top: 100% ;
-    width: 0%;
-    background: black;
-    height: 3px;
-    transition: all 0.5s linear;
+    height: 100%;
+    width: 100%;
+    background: var(--dark-blue-text);
+    border-left: .2rem solid #fff ;
+    animation: typing 1.5s steps(10) infinite;
 }
 
-.box a::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 100% ;
-    width: 0%;
-    background: black;
-    height: 3px;
-    transition: all 0.5s linear;
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
 }
 
-.box a:hover::before {
-    width: 100% ;
-    background: black;
+@media(max-width: 768px){
+    
+    #wrapper {
+        display: inline-block;
+    }
+    .home {
+        background: #fff;
+        color: var(--dark-blue-text);
+    }
+
+    header {
+        background: var(--dark-blue-text);
+    }
+
+    .logo h1 {
+        color: #fff;
+    }
+
+    .dynamic-texts li span::after {
+        background: white;
+        border-left: .2rem solid var(--dark-blue-text);
+    }
+
+    .dynamic-texts li {
+        color: var(--dark-blue-text);
+    }
+
+    #wrapper .static-text {
+        color: var(--dark-blue-text);
+    }
 }
 
-.box a:hover::after {
-    width: 100% ;
-    background: black;
-}
 
-.just-nje {
-    background: #757575 ;
-    height: 100% ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+/* ================================ */
+/* ====|                      |==== */
+/* ====|                      |==== */
+/* ====|        ABOUT         |==== */
+/* ====|                      |==== */
+/* ====|                      |==== */
+/* ================================ */
+
