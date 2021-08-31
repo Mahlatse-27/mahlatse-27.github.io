@@ -10,7 +10,7 @@
 :root {
     --dark-blue-text: #00112C;
     --light-blue-text: #0051d4 ;
-    --stone-text: #8d8d8d;
+    --stone-text: #6e6e6e;
     --dark-grey: #474747 ;
 }
 
@@ -47,8 +47,18 @@ header .layout {
     padding: 3rem 1rem;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
 .logo h1 {
     font-size: 2rem;
+    color: var(--dark-blue-text);
+}
+
+.logo h1 i {
+    font-size: 2.5rem;
     color: var(--dark-blue-text);
 }
 
@@ -161,7 +171,7 @@ label #btn, label #cancel {
 
 .home {
     min-height: 100vh;
-    background: var(--dark-blue-text);
+    background: var(--dark-blue-text); 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -242,6 +252,11 @@ label #btn, label #cancel {
         color: #fff;
     }
 
+    .logo h1 i {
+        font-size: 2.5rem;
+        color: #fff;
+    }
+
     .dynamic-texts li span::after {
         background: white;
         border-left: .2rem solid var(--dark-blue-text);
@@ -265,3 +280,125 @@ label #btn, label #cancel {
 /* ====|                      |==== */
 /* ================================ */
 
+.wrapper {
+    position: relative;
+}
+
+.about-me {
+    position: relative;
+    min-height: 100vh;   
+}
+
+#divider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--dark-blue-text);
+    min-height: 40vh;
+    z-index: -1;
+}
+
+.wrapper-container {
+    position: absolute;
+    top: 450px;
+    left: 50%;
+    transform: translate(-50%, -350px);
+    width: 90%;
+    min-height: 50vh;
+    border-radius: 40px;
+    background: #fff;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper-container .layout {
+    height: 100%;
+}
+
+.about-me .textBox {
+    width: 50%;
+    padding: 1rem 3rem ;
+    /* height: 100%; */
+}
+
+.about-me .textBox h1 {
+    margin: 0 0 50px 0;
+    font-size: 5rem ;
+    color: var(--dark-blue-text)
+}
+
+
+.about-me .textBox .box {
+    max-width: 600px;
+}
+
+.about-me .textBox h3 {
+    color: var(--dark-blue-text);
+    margin-bottom: 15px ;
+}
+
+.about-me .textBox h4 {
+    color: var(--dark-grey);
+}
+
+.about-me .textBox h3 span {
+    color: #880808;
+    letter-spacing: 2px ;
+    line-height: 30px ;
+    font-size: 1.5rem;
+} 
+
+.about-me .textBox p {
+    margin-top: 30px;
+    letter-spacing: 1px;
+    color: var(--stone-text);
+}
+
+.about-me .textBox p span {
+    font-weight: bold;
+    color: var(--dark-grey);
+}
+
+.about-me .imgBox {
+    padding: 1rem ;
+    max-width: 700px;
+    height: 100%;
+}
+
+.about-me .imgBox img {
+    border-radius: 40px;
+    width: 100%;
+    height: 100%;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    margin: 40px 0 ;
+}
+
+.social-icons i {
+    margin-right: 1.5rem;
+    
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: var(--dark-blue-text);
+    font-size: 2rem;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons a:hover {
+    background: var(--dark-blue-text);
+    color: #fff;
+}
+
+@media (max-width: 800px){
+    .about-me .textBox h1 {
+        font-size: 3rem;
+    }
+}
